@@ -2,7 +2,7 @@
 
 I built ModelLab to answer a question that a loss curve couldn’t settle for me. When an adapter learns to return clean JSON, has it also learned to read the receipt more accurately?
 
-ModelLab is an open-source cloud AI training and experimentation studio. I use a local Next.js and FastAPI application to manage datasets, review a RunPod quote, follow training, and compare the base model and adapter on the same examples. The public demo opens directly onto the measured research history. I built the application and its verification tools with AI coding assistance.
+ModelLab is an open-source cloud AI training and experimentation studio. I use a local Next.js and FastAPI application to manage datasets, review a RunPod quote, follow training, and compare the base model and adapter on the same examples. The public demo opens directly onto the measured research history.
 
 ![ModelLab overview with the completed receipt studies and recorded cloud spend](docs/screenshots/overview.png)
 
@@ -118,12 +118,14 @@ The receipts are synthetic, in English and drawn from a limited vocabulary. Seve
 
 I would next test licensed receipts from independent sources, have reviewers adjudicate ambiguous labels, and register an equivalence margin and sample size before making any equivalence claim. On the engineering side, I would add cooldown-aware invoice reconciliation and a clearer recovery flow for stopped storage.
 
-## AI coding assistance and licensing
+## Licensing
 
-I used OpenAI Codex to write and review application code, operate the approved sessions, assemble tests, check the recorded results and prepare this documentation. The screenshots were captured from the running application. The figures and claims can be traced to the released observations. ModelLab code and original receipt generators use the MIT license. Upstream models and dependencies retain their own terms. [License](LICENSE) · [Model and dependency licensing](docs/licensing.md)
+ModelLab code and original receipt generators use the MIT license. Upstream models and dependencies retain their own terms. [License](LICENSE) · [Model and dependency licensing](docs/licensing.md)
 
 [Release verification, security audit and repository inventory](docs/release.md)
 
 ## Let's Connect
 
-You can find my projects on [GitHub at sslcat](https://github.com/sslcat).
+If you’re curious about taking a fine-tuning study from a cloud GPU quote to a result you can reproduce, I’d love to talk. I can walk through the architecture and tools I used, the math behind QLoRA and parameter efficiency, and why I built cost limits and shutdown checks into the training workflow. I’m also happy to discuss how I designed the controlled comparisons, what the paired statistics say about the findings and their limits, and what I learned from the runs.
+
+Whether you’re evaluating the work, planning a similar experiment, or curious about how I built it, [reach out on GitHub](https://github.com/sslcat).
