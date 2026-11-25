@@ -52,7 +52,7 @@ For equal token counts this is the arithmetic mean of the microbatch gradients. 
 
 ## Low-rank adaptation and trainable counts
 
-A dense matrix of rank at most $r$ admits a factorization through an $r$-dimensional space. For example, truncating an SVD gives the best rank-$r$ approximation under squared Frobenius error. LoRA learns two factors by task loss. It does not compute the pretrained matrix’s SVD. In the linear-layer convention below, $W_0$ has shape $d_{\rm out}\times d_{\rm in}$. The deployed update and its rank bound are
+A dense matrix of rank at most $r$ admits a factorization through an $r$-dimensional space. For example, truncating an SVD gives the best approximation of rank $r$ under squared Frobenius error. LoRA learns two factors by task loss. It does not compute the pretrained matrix’s SVD. In the linear-layer convention below, $W_0$ has shape $d_{\rm out}\times d_{\rm in}$. The deployed update and its rank bound are
 
 $$
 W=W_0+\frac{\alpha}{r}BA,\quad
