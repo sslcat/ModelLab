@@ -82,7 +82,7 @@ At rank 32 the count is 10,092,544. The two measured adapter files were 5,060,98
 The frozen backbone’s eligible weight blocks are represented with 4-bit NF4 codes. At a conceptual level the decoder looks up a codebook value $c_k$ and applies a block scale $s_b$.
 
 $$
-\tilde w_i=s_b c_{k_i},\qquad k_i\in\{0,\ldots,15\}.
+\tilde w_i=s_b c_{k_i},\qquad k_i\in\lbrace 0,\ldots,15\rbrace.
 $$
 
 Double quantization compresses scale information as well. The worker requests NF4, double quantization and BF16 compute. The adapter learns against the dequantized approximation during layer computation. The frozen matrix and its codes receive no optimizer updates. A useful expression for the adapted output during inference is
