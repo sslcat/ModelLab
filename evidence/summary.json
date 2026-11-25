@@ -1,0 +1,281 @@
+{
+  "actual_usd": 3.621711880317889,
+  "adapters": [
+    {
+      "adapter_bytes": 5060984,
+      "adapter_sha256": "708e89a9eab3b5188ff3bf91a4042a8112797997cf6674956d00ef63344a81ed",
+      "seed": 101,
+      "session": "size-7b",
+      "trainable": 1261568
+    },
+    {
+      "adapter_bytes": 5060984,
+      "adapter_sha256": "9f48d8fe0f8a9a0296f34afcdbccc8519d595186d06a964560d63e5f132b82f9",
+      "seed": 42,
+      "session": "size-7b",
+      "trainable": 1261568
+    },
+    {
+      "adapter_bytes": 5060984,
+      "adapter_sha256": "dcac4393182050ef2a02eb399428f21b12007e4734aa3e05a59d0e62e09049d1",
+      "seed": 73,
+      "session": "size-7b",
+      "trainable": 1261568
+    },
+    {
+      "adapter_bytes": 3705288,
+      "adapter_sha256": "9501d727d51dc8ccd7486ff0c274fc2df229b7cc9e40b7bd42e5c0361d28fac4",
+      "seed": 101,
+      "session": "size-3b",
+      "trainable": 921600
+    },
+    {
+      "adapter_bytes": 3705288,
+      "adapter_sha256": "9ff3f5c76ffd0dfad8aa868acb09151c664b58f873ae57bc65c4264dc6930bf5",
+      "seed": 42,
+      "session": "size-3b",
+      "trainable": 921600
+    },
+    {
+      "adapter_bytes": 3705288,
+      "adapter_sha256": "c905c249f05d9f2f8526ad1cf6ce51b4f8fb89024e5ec9182be56d1a90c0aaeb",
+      "seed": 73,
+      "session": "size-3b",
+      "trainable": 921600
+    },
+    {
+      "adapter_bytes": 2193720,
+      "adapter_sha256": "dbb391a5bbee2461d83e8fef5f0c8c0a76595668d1ee3839749484861d2cdc3c",
+      "seed": 101,
+      "session": "size-1.5b",
+      "trainable": 544768
+    },
+    {
+      "adapter_bytes": 2193720,
+      "adapter_sha256": "25d3f65a07c8540e84200431a20cfc7809719a6d23bb4f4caeb4ffe802d9f72e",
+      "seed": 42,
+      "session": "size-1.5b",
+      "trainable": 544768
+    },
+    {
+      "adapter_bytes": 2193720,
+      "adapter_sha256": "f4f8a38a34526ea437953bfc4d558e2c9bd24edd84557a17b41a2ee6af5c2cb9",
+      "seed": 73,
+      "session": "size-1.5b",
+      "trainable": 544768
+    },
+    {
+      "adapter_bytes": 1093728,
+      "adapter_sha256": "d4cc7b72042feed58d2a40c5cb6dcd6e675a353d9c33c1c8da164eeaf3dd720a",
+      "seed": 101,
+      "session": "size-0.5b",
+      "trainable": 270336
+    },
+    {
+      "adapter_bytes": 1093728,
+      "adapter_sha256": "1babb15fa3af4a2b9822fa811e8137f1eb441f72960ca995aa650161cdb0408b",
+      "seed": 42,
+      "session": "size-0.5b",
+      "trainable": 270336
+    },
+    {
+      "adapter_bytes": 1093728,
+      "adapter_sha256": "a9ca352f7d8822d171fcf1580d7f3c16b67302a5d3b366c5f627d9f0f7e5c8d9",
+      "seed": 73,
+      "session": "size-0.5b",
+      "trainable": 270336
+    },
+    {
+      "adapter_bytes": 40385208,
+      "adapter_sha256": "1ba06c1423ffe31dcf7873504188796305943f4123f97208ad1e098706c8ee6a",
+      "seed": 42,
+      "session": "rank-32",
+      "trainable": 10092544
+    },
+    {
+      "adapter_bytes": 20200056,
+      "adapter_sha256": "6928b182d2ff983f3c289f0751d252fa926628b68ed63a74250fb59b0cffa7c2",
+      "seed": 42,
+      "session": "rank-16",
+      "trainable": 5046272
+    },
+    {
+      "adapter_bytes": 10107280,
+      "adapter_sha256": "a905845b3d52191414be9b14c5630c78382e47e587eee3fec81edff17d42fc19",
+      "seed": 42,
+      "session": "rank-8",
+      "trainable": 2523136
+    },
+    {
+      "adapter_bytes": 5060984,
+      "adapter_sha256": "9f48d8fe0f8a9a0296f34afcdbccc8519d595186d06a964560d63e5f132b82f9",
+      "seed": 42,
+      "session": "rank-4",
+      "trainable": 1261568
+    },
+    {
+      "adapter_bytes": 10107280,
+      "adapter_sha256": "df645b74b373cf1a8153b85cc90a2a44dda186b2e44e7342717ab7bb893d96f2",
+      "seed": 42,
+      "session": "pilot",
+      "trainable": 2523136
+    }
+  ],
+  "charges": [
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.004282407462596893,
+      "gpuAmount": 0.5322088785469532,
+      "session": "size-7b",
+      "totalAmount": 0.5364912860095501
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.0031250000465661287,
+      "gpuAmount": 0.38401274383068085,
+      "session": "size-3b",
+      "totalAmount": 0.387137743877247
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.00601851858664304,
+      "gpuAmount": 0.6957594761624932,
+      "session": "size-1.5b",
+      "totalAmount": 0.7017779947491363
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.004282407462596893,
+      "gpuAmount": 0.5580139383673668,
+      "session": "size-0.5b",
+      "totalAmount": 0.5622963458299637
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.0013888889225199819,
+      "gpuAmount": 0.18662163615226746,
+      "session": "rank-32",
+      "totalAmount": 0.18801052507478744
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.003703703754581511,
+      "gpuAmount": 0.417962783947587,
+      "session": "rank-16",
+      "totalAmount": 0.4216664877021685
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.001967592630535364,
+      "gpuAmount": 0.23050406761467457,
+      "session": "rank-8",
+      "totalAmount": 0.23247166024520993
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.003703703754581511,
+      "gpuAmount": 0.455965057015419,
+      "session": "rank-4",
+      "totalAmount": 0.4596687607700005
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.0008101852145045996,
+      "gpuAmount": 0.07125315256416798,
+      "session": "pilot",
+      "totalAmount": 0.07206333777867258
+    },
+    {
+      "cpuAmount": 0,
+      "diskAmount": 0.00023148150648921728,
+      "gpuAmount": 0.059896256774663925,
+      "session": "pilot-attempt",
+      "totalAmount": 0.06012773828115314
+    }
+  ],
+  "counts": {
+    "pilot": 96,
+    "rank": 2560,
+    "size": 5120
+  },
+  "fingerprints": {
+    "pilot": "8e0f32c1c3586747a0225eb9fe7c3be4674a015423576d1204b55a5d5e351ce7",
+    "rank": "84f1f7edc4ec211dcead620409117d0ae9ca868d77d9c617812f21c297c44fc4",
+    "size": "327c12868e9daa60239d347fd65af8315ca6aeafd517a86feb18c18e7e0158d0"
+  },
+  "frontiers": {
+    "cost": [
+      "base/size-3b",
+      "tuned/size-7b"
+    ],
+    "joint": [
+      "base/size-3b",
+      "tuned/size-3b",
+      "tuned/size-7b"
+    ],
+    "latency": [
+      "tuned/size-3b",
+      "tuned/size-7b"
+    ]
+  },
+  "primary": {
+    "development": {
+      "delta": -0.46875,
+      "exact_p": 1.862645149230957e-09,
+      "gains": 0,
+      "losses": 30,
+      "lower": -0.6145879079866812,
+      "n": 64,
+      "ties": 34,
+      "upper": -0.26048223115878727
+    },
+    "locked": {
+      "delta": 0.078125,
+      "exact_p": 0.05191052214883845,
+      "gains": 58,
+      "losses": 38,
+      "lower": -0.03496241033619302,
+      "n": 256,
+      "ties": 160,
+      "upper": 0.1888082047023415
+    }
+  },
+  "size": [
+    {
+      "base": 40,
+      "mean": 0.29296875,
+      "sample_sd": 0.0067658234670659265,
+      "seed_101": 74,
+      "seed_42": 77,
+      "seed_73": 74,
+      "size": "0.5b"
+    },
+    {
+      "base": 109,
+      "mean": 0.4908854166666667,
+      "sample_sd": 0.014788823817188212,
+      "seed_101": 123,
+      "seed_42": 130,
+      "seed_73": 124,
+      "size": "1.5b"
+    },
+    {
+      "base": 130,
+      "mean": 0.4596354166666667,
+      "sample_sd": 0.009830513587592122,
+      "seed_101": 118,
+      "seed_42": 120,
+      "seed_73": 115,
+      "size": "3b"
+    },
+    {
+      "base": 110,
+      "mean": 0.5690104166666666,
+      "sample_sd": 0.011933790872280834,
+      "seed_101": 149,
+      "seed_42": 145,
+      "seed_73": 143,
+      "size": "7b"
+    }
+  ]
+}

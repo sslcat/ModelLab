@@ -1,0 +1,7 @@
+# Remote only. The image supplies PyTorch 2.8 and CUDA 12.8.
+transformers==4.57.1
+trl==0.24.0
+peft==0.17.1
+bitsandbytes==0.48.1
+accelerate==1.11.0
+datasets==4.3.0

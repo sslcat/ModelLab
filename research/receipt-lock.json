@@ -1,0 +1,56 @@
+{
+  "bundle_sha256": "84f1f7edc4ec211dcead620409117d0ae9ca868d77d9c617812f21c297c44fc4",
+  "license": "MIT",
+  "splits": {
+    "test": {
+      "count": 64,
+      "sha256": "f53b5f9f9d84e66c0b6a82b2a03ca8b591c7c579573dfc02370a33adb2206509",
+      "templates": {
+        "amendment": 8,
+        "clerk": 4,
+        "correction": 4,
+        "dispatch": 4,
+        "email": 4,
+        "exception": 4,
+        "handover": 8,
+        "handwritten": 4,
+        "labels": 4,
+        "ledger": 8,
+        "table": 4,
+        "waybill": 8
+      }
+    },
+    "train": {
+      "count": 384,
+      "sha256": "9e7ce70be461693058cd52de3309487d05f6734d71853a1870f1c6d2c3d25aca",
+      "templates": {
+        "clerk": 48,
+        "correction": 48,
+        "dispatch": 48,
+        "email": 48,
+        "exception": 48,
+        "handwritten": 48,
+        "labels": 48,
+        "table": 48
+      }
+    },
+    "validation": {
+      "count": 64,
+      "sha256": "37395ac471e86ff26788dc4f07e196742247f8584a267bf44aa6aa0819d0dd37",
+      "templates": {
+        "call": 10,
+        "clerk": 4,
+        "correction": 4,
+        "dispatch": 4,
+        "email": 4,
+        "exception": 4,
+        "handwritten": 4,
+        "labels": 4,
+        "mark": 10,
+        "recount": 12,
+        "table": 4
+      }
+    }
+  },
+  "version": "receipt-v2.1"
+}

@@ -1,0 +1,142 @@
+{
+  "version": "size-v1",
+  "protocol": {
+    "version": "size-v1",
+    "seeds": [
+      42,
+      73,
+      101
+    ],
+    "rank": 4,
+    "alpha": 8,
+    "arms": [
+      "base",
+      "seed_42",
+      "seed_73",
+      "seed_101"
+    ],
+    "decoder": "greedy-schema",
+    "grammar": "lm-format-enforcer==0.11.3",
+    "max_new_tokens": 96,
+    "prompt": "unchanged receipt-v2 extraction instruction",
+    "timing": "CUDA-synchronized generation; batch one",
+    "primary": "1.5B rank 4 seed 42 versus 7B base on 256 locked notes"
+  },
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404@sha256:4d1721e62b56d345c83b4fd6090664be6daf9312caab5b2e76f23d8231941851",
+  "corpus_sha256": "327c12868e9daa60239d347fd65af8315ca6aeafd517a86feb18c18e7e0158d0",
+  "max_rate_usd": 0.89,
+  "analysis": {
+    "primary_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "primary_seed": 42,
+    "reference": "Qwen/Qwen2.5-7B-Instruct",
+    "endpoint": "paired strict complete record",
+    "interval": "Bonferroni exact gain/loss 95%",
+    "template_sensitivity": "leave one template family out",
+    "seed_variation": "sample SD of seed accuracies",
+    "frontier": "maximize accuracy, minimize the selected resource; retain ties"
+  },
+  "workers": {
+    "requirements.txt": "57a3b88eceb42aea0f4dfcba868ffef1d9963336bb5c7a625cf3635f01c1f231",
+    "boot.sh": "df3dc784ab2d4166b73b39129aded4fc0c44698c2b6722b954fbaefad470cf1a",
+    "launcher_core.py": "6329723be7a884cd53a1e64b3b54aac867caef980dd0137139c0155fa89dfc39",
+    "trainer_core.py": "c34b353438874925359ec2a945d551062d1dfee6f41761e52b1f9aab17e9f662",
+    "receipt_scores.py": "99c3d67097f7c34cbfafb1cb9c707d8ae031c8421b4b8c8adccb873c33317805",
+    "launch.py": "5df9be32f9a052e7b87ee275121023c2dacc051716c95774d8face94991729fb",
+    "train.py": "cf3a39f96e182722e2a128a41b745220783541f167694459f536a50572387d0d",
+    "controlled.py": "542ba52271e34e15d471d4b46bc0bd4422cbb272cded5fccd9c4eab6ef6242ad"
+  },
+  "sessions": [
+    {
+      "config": {
+        "name": "Size study · Qwen2.5-0.5B-Instruct · three seeds",
+        "dataset": "a9385fcf1aa7d9cfc3405933c83a21f295724d09ebcf45050f08dfd6ad4ce96f",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "method": "QLoRA",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "minutes": 60,
+        "learning_rate": 0.0002,
+        "epochs": 1,
+        "batch_size": 1,
+        "grad_accum": 8,
+        "rank": 4,
+        "alpha": 8,
+        "dropout": 0.05,
+        "seq_len": 512,
+        "seed": 42
+      },
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "base_parameters": 494032768,
+      "expected_trainable": 270336,
+      "max_usd": 1.16
+    },
+    {
+      "config": {
+        "name": "Size study · Qwen2.5-1.5B-Instruct · three seeds",
+        "dataset": "a9385fcf1aa7d9cfc3405933c83a21f295724d09ebcf45050f08dfd6ad4ce96f",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "method": "QLoRA",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "minutes": 75,
+        "learning_rate": 0.0002,
+        "epochs": 1,
+        "batch_size": 1,
+        "grad_accum": 8,
+        "rank": 4,
+        "alpha": 8,
+        "dropout": 0.05,
+        "seq_len": 512,
+        "seed": 42
+      },
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "base_parameters": 1543714304,
+      "expected_trainable": 544768,
+      "max_usd": 1.43
+    },
+    {
+      "config": {
+        "name": "Size study · Qwen2.5-3B-Instruct · three seeds",
+        "dataset": "a9385fcf1aa7d9cfc3405933c83a21f295724d09ebcf45050f08dfd6ad4ce96f",
+        "model": "Qwen/Qwen2.5-3B-Instruct",
+        "method": "QLoRA",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "minutes": 90,
+        "learning_rate": 0.0002,
+        "epochs": 1,
+        "batch_size": 1,
+        "grad_accum": 8,
+        "rank": 4,
+        "alpha": 8,
+        "dropout": 0.05,
+        "seq_len": 512,
+        "seed": 42
+      },
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "base_parameters": 3085938688,
+      "expected_trainable": 921600,
+      "max_usd": 1.7
+    },
+    {
+      "config": {
+        "name": "Size study · Qwen2.5-7B-Instruct · three seeds",
+        "dataset": "a9385fcf1aa7d9cfc3405933c83a21f295724d09ebcf45050f08dfd6ad4ce96f",
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "method": "QLoRA",
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "minutes": 120,
+        "learning_rate": 0.0002,
+        "epochs": 1,
+        "batch_size": 1,
+        "grad_accum": 8,
+        "rank": 4,
+        "alpha": 8,
+        "dropout": 0.05,
+        "seq_len": 512,
+        "seed": 42
+      },
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "base_parameters": 7615616512,
+      "expected_trainable": 1261568,
+      "max_usd": 2.24
+    }
+  ]
+}
