@@ -110,6 +110,8 @@ The first two commands rescore the bundled responses and verify the published ta
 
 To repeat training on your own RunPod account, run `python -m research.reproduce --drafts pilot`, then the same command with `rank` or `size`. These commands create local drafts only. Open your live workspace to review current stock, price and deadlines before approving any allocation. Training reproductions can incur new provider charges. The pilot’s historical worker sources, rank protocol and size-study source hashes are checked before staging. The public packet contains all original responses and numeric histories, with adapter hashes for comparison. [Evidence guide](evidence/README.md) · [Frozen size design](research/size-design.json)
 
+The studio uses a separate dependency profile for new training jobs. Historical study drafts retain the recorded worker versions. [GPU dependency profiles and security advisories](docs/dependency-security.md)
+
 ## Limitations and future work
 
 The receipts are synthetic, in English and drawn from a limited vocabulary. Several examples share templates. Intervals based on individual notes can understate uncertainty across formats. The rank comparison has one seed and the size comparison has three. Quantization, pretraining and architecture vary the interpretation of comparisons across models. Whole-session cost includes shared setup and evaluation. It cannot establish marginal serving cost.

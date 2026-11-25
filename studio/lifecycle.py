@@ -112,12 +112,20 @@ def authorize(key, token, p):
     return doc
 
 
+def historical_worker_paths():
+    return {p.name: p for p in (store.ROOT / "remote").iterdir() if p.is_file()}
+
+
 def worker_sources():
-    return {
-        p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in (store.ROOT / "remote").iterdir()
-        if p.is_file()
-    }
+    return {name: hashlib.sha256(path.read_bytes()).hexdigest()
+            for name, path in historical_worker_paths().items()}
+
+
+def current_worker_paths():
+    paths = historical_worker_paths()
+    for name in ("train.py", "requirements.txt"):
+        paths[name] = store.ROOT / "remote" / "current" / name
+    return paths
 
 
 def check_research_lock(doc):
@@ -153,8 +161,12 @@ def worker_config(doc):
             "test",
         )
     }
-    sources = doc.get("research_worker_sha256") or worker_sources()
+    sources = doc.get("research_worker_sha256")
     extra = {}
+    if not sources and not doc.get("size_study"):
+        sources = {name: hashlib.sha256(path.read_bytes()).hexdigest()
+                   for name, path in current_worker_paths().items()}
+        extra["dependency_profile"] = "current"
     if doc.get("size_study"):
         from research.size_design import locked_design
         frozen = locked_design()
@@ -198,7 +210,12 @@ def stage(doc, ssh):
         from research.reproduce import pilot_sources
         files = {n: path for n,path in pilot_sources().items() if n != "boot.sh"}
     else:
-        files = {n: store.ROOT / "remote" / n for n in names}
+        paths = (
+            current_worker_paths()
+            if not doc.get("research_worker_sha256")
+            else historical_worker_paths()
+        )
+        files = {name: paths[name] for name in names}
     for name, path in files.items():
         payload[name] = path.read_bytes()
     for name, content in payload.items():

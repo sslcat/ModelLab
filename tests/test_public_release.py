@@ -1,4 +1,5 @@
 import hashlib
+import json
 import os
 import tempfile
 import unittest
@@ -64,6 +65,38 @@ class PublicReleaseTests(unittest.TestCase):
                 63,
             )
             self.assertEqual(c.get("/api/runs/missing/configuration").status_code, 404)
+
+    def test_new_job_stages_current_dependencies_under_recorded_hashes(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(
+            os.environ, {"MODELLAB_STATE": tmp}
+        ):
+            store.init()
+            config = reproduce.sample()["config"]
+            with store.db(True) as connection:
+                draft = store.new_draft(config, connection)
+                store.put(connection, draft)
+
+            class FakeSSH:
+                def __init__(self):
+                    self.writes = {}
+
+                def command(self, command, content=None):
+                    if content is not None:
+                        name = command.split(" > /workspace/modellab/", 1)[1].split(".tmp", 1)[0]
+                        self.writes[name] = content
+                    if command.startswith("sha256sum "):
+                        return hashlib.sha256(self.writes["data.json"]).hexdigest().encode()
+                    return b""
+
+            ssh = FakeSSH()
+            lifecycle.stage(draft, ssh)
+            config = json.loads(ssh.writes["config.json"])
+            self.assertEqual(config["dependency_profile"], "current")
+            for name in ("requirements.txt", "train.py"):
+                contents = ssh.writes[name]
+                self.assertEqual(contents, lifecycle.current_worker_paths()[name].read_bytes())
+                self.assertEqual(hashlib.sha256(contents).hexdigest(), config["worker_sha256"][name])
+                self.assertNotEqual(config["worker_sha256"][name], lifecycle.worker_sources()[name])
 
     def test_reproduction_drafts_match_recorded_sources_with_no_allocation(self):
         with (

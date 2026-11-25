@@ -1,0 +1,7 @@
+# New RunPod jobs only. The pinned image supplies PyTorch 2.8 and CUDA 12.8.
+transformers==5.24.1
+trl==1.18.2
+peft==0.22.0
+bitsandbytes==0.50.2
+accelerate==1.16.0
+datasets==5.2.0
